@@ -4,8 +4,8 @@ const services = require("./grpcs/app_grpc_pb");
 const grpc = require("grpc");
 
 function Main() {
-    let client = new services.FFDBAPIClient('localhost:50051',
-                                           grpc.credentials.createInsecure);
+    let client = new services.FFDBAPIClient('ffdbapi:50051',
+                                           grpc.credentials.createInsecure());
     let request = new message.FFDBRequest();
     let user;
     if(process.argv.length >= 3) {
@@ -14,9 +14,9 @@ function Main() {
         user = 'FFDB';
     }
     request.setName(user);
-    client.sayFFDB(request, (err, response) {
+    client.sayFFDB(request, (err, response) => {
         console.log("Greeting: " + response.getMessage());
     })
 }
 
-main();
+Main();

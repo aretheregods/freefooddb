@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	api "github.com/aretheregods/freefooddb/grpcs"
+	api "github.com/aretheregods/freefooddb/api/grpcs"
 	"google.golang.org/grpc"
 )
 
