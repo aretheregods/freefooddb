@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package api;
+
+service FFDBAPI {
+  rpc SayFFDB(FFDBRequest) returns (FFDBResponse) {}
+}
+
+message FFDBRequest {
+  string name = 1;
+}
+
+message FFDBResponse {
+  string message = 1;
+}
