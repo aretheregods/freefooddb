@@ -1,0 +1,14 @@
+version: '1'
+services:
+    meals.api:
+        image: aretheregods/ffdb:meals-api
+        ports:
+            - "50051:50051"
+        networks:
+            - "ffdb"
+    frontend:
+        image: areteregods/ffdb:frontend
+        networks:
+            - "ffdb"
+networks:
+    ffdb:
