@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "google-protobuf": "^3.5.0",
-    "grpc": "^1.9.1"
+    "grpc": "^1.9.1",
+    "grpc-tools": "^1.6.6",
+    "koa": "^2.5.0"
   }
 }
