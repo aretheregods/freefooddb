@@ -1,0 +1,21 @@
+#App {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+    "hdr"
+    "cntnt";
+}
+
+#App-header {
+  background-color: #ADD8E6;
+  grid-area: hdr;
+  text-align: center;
+}
+
+#App-title {
+  font-size: 1.5em;
+}
+
+#Main-content {
+  grid-area: cntnt;
+}
